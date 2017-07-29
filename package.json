@@ -1,0 +1,19 @@
+{
+  "name": "rackcity",
+  "version": "1.0.0",
+  "description": "Govhack 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mscal/rackcity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mscal/rackcity/issues"
+  },
+  "homepage": "https://github.com/mscal/rackcity#readme"
+}
