@@ -3,12 +3,6 @@ console.log('loaded scripts.js');
 
 var closestCycle;
 
-var promise = new Promise(function(resolve, reject){
-	if (true) {};
-});
-
-
-
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
 		   doSomething(position.coords.latitude,position.coords.longitude)
