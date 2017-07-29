@@ -18,7 +18,7 @@ function initMap() {
     });
     var bikeLayer = new google.maps.BicyclingLayer({});
         bikeLayer.setMap(map);
-    directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+    directionsDisplay = new google.maps.DirectionsRenderer();
     directionsDisplay.setMap(map);
 
     updateLocation(goal,waypts);
@@ -76,14 +76,35 @@ function updateLocation(dest, way) {
     }
 }
 
-function curryPot(closestCycle, closestArt){
-  console.log(closestCycle);
-  console.log(closestArt);
-  
+function curryPot(closestCycle, closestArt, start){
+  var roganStops = [{
+    lat:closestCycle.latitude,
+    lng:closestCycle.longitude
+  }]
+
+  var roganFinish = {
+    lat: closestArt.Lat,
+    lng: closestArt.Long
+  }
+
+
+
+ var start = {
+        lat: -27.4706,
+        lng: 153.0170
+    };
+
+    console.log(start);
+  console.log(roganStops);
+  console.log(roganFinish);
+
+
+  getDirections(start, roganFinish, roganStops)
+
 }
 
-function getDirections(current, final, stops) {
 
+function getDirections(current, final, stops) {
     directionsService = new google.maps.DirectionsService();
     directionsService.route(
       {

@@ -58,7 +58,7 @@ function doSomething(latitude, longitude){
 
 	$.get("js/publicart.csv", function(text){
 	     var data = Papa.parse(text, {header: true});
-	    	checkLocationofArt(data, closestCycle)
+	    	checkLocationofArt(data, closestCycle, start)
 });
 
 
@@ -68,7 +68,7 @@ function doSomething(latitude, longitude){
 
 }
 
-function checkLocationofArt(data, closestCycle){
+function checkLocationofArt(data, closestCycle, start){
 		for (var i =0; i < data.data.length; i++) {
 	    		
 	    		stop = {
@@ -89,7 +89,7 @@ function checkLocationofArt(data, closestCycle){
 	    		};
 			}
 			
-				curryPot(closestCycle, newArt);
+				curryPot(closestCycle, newArt, start);
 
 }
 
