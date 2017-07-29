@@ -1,5 +1,16 @@
 console.log('loaded scripts.js');
 
-$.getJSON("brisbanecycle.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
+
+$.getJSON("js/bris.json", function(data) {
+	console.log(data);
+
 });
+
+if ("geolocation" in navigator) {
+  console.log('geolocation available');
+  navigator.geolocation.getCurrentPosition(function(position){
+  	console.log(position.coords.latitude, position.coords.longitude);
+  });
+} else {
+  console.log('geolocation not available');
+}
