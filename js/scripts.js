@@ -27,8 +27,8 @@ function doSomething(latitude, longitude){
 
 
 	start = {
-		latitude: -27.481438,
-		longitude: 153.014593
+		latitude: latitude,
+		longitude: longitude
 	}
 
 	$.getJSON("js/bris.json", function(data) {
