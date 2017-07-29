@@ -30,3 +30,14 @@
 	left:0;
 	top:0;
 }
+
+h1{
+	font-family: Michroma, sans-serif;
+}
+
+/***** INDEX *****/
+
+.indexButton{
+	background-color: #FF9800;
+	padding: 50px;
+}
