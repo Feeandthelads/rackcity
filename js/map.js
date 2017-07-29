@@ -76,7 +76,14 @@ function updateLocation(dest, way) {
     }
 }
 
+function curryPot(closestCycle, closestArt){
+  console.log(closestCycle);
+  console.log(closestArt);
+  
+}
+
 function getDirections(current, final, stops) {
+
     directionsService = new google.maps.DirectionsService();
     directionsService.route(
       {
@@ -94,4 +101,7 @@ function getDirections(current, final, stops) {
           window.alert('Directions request failed due to ' + status);
         }
     });
+
+
 }
+
