@@ -3,6 +3,11 @@ console.log('loaded scripts.js');
 
 var closestCycle;
 
+var promise = new Promise(function(resolve, reject){
+	if (true) {};
+});
+
+
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
@@ -40,6 +45,7 @@ function doSomething(latitude, longitude){
 				if(newNumber < lowestNumber){
 					lowestNumber = newNumber;
 					closestCycle = cycleArray[i];
+					loadedCycle(cycleArray[i]);
 			}
 				
 			}
@@ -50,26 +56,6 @@ function doSomething(latitude, longitude){
 
 }
 
-
-// start = {
-//   latitude: 30.849635,
-//   longitude: -83.24559
-// }
-// end = {
-//   latitude: 27.950575,
-//   longitude: -82.457178
-// }
-
-// console.log(haversine(start, end))
-// console.log(haversine(start, end, {unit: 'mile'}))
-// console.log(haversine(start, end, {unit: 'meter'}))
-// console.log(haversine(start, end, {threshold: 1}))
-// console.log(haversine(start, end, {threshold: 1, unit: 'mile'}))
-// console.log(haversine(start, end, {threshold: 1, unit: 'meter'}))
-
-
-// I need to:
-// go through the array from bris.js, get the lat and long
-// run that through my current location
-
-
+function loadedCycle(cycleArray){	
+	closestCycle = cycleArray;
+}
