@@ -29,8 +29,7 @@
 	position: fixed;
 	left:0;
 	top:0;
-	background-image: url("../img/brisbane.jpg");
-	background-size: auto 100%;
+
 }
 
 h1{
@@ -45,6 +44,20 @@ h1{
 	text-shadow: 0px 0px 20px cyan;
 }
 
+h2{
+	font-family: 'Quantico', sans-serif;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: cyan;
+	font-size: 2em;
+	text-shadow: 0px 0px 20px cyan;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
 p {
 	font-family: 'Quantico', sans-serif;
 	text-align: center;
@@ -56,6 +69,11 @@ p {
 }
 
 /***** INDEX *****/
+
+.indexContents{
+	background-image: url("../img/brisbane.jpg");
+	background-size: auto 100%;
+}
 
 #indexHeader {
 	background-color: rgba(0,0,0,0.8);
@@ -77,4 +95,21 @@ p {
 .indexButton:hover{
 	color: #000000;
 	text-decoration: none;
+}
+
+/***** MAP *****/
+.mapContents{
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+}
+
+#banner{
+	background-color: rgba(0,0,0,0.9);
+	overflow: hidden;
+	width: 100%;
+}
+
+#map{
+	position: relative;
 }
