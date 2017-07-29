@@ -77,29 +77,33 @@ function updateLocation(dest, way) {
 }
 
 function curryPot(closestCycle, closestArt, start){
-  var roganStops = [{
+  var roganStops = [];
+
+  var roganStopsbeforethechange = {
     lat:closestCycle.latitude,
     lng:closestCycle.longitude
-  }]
-
-  var roganFinish = {
-    lat: closestArt.Lat,
-    lng: closestArt.Long
   }
 
+  roganStops.push({
+    location:roganStopsbeforethechange,
+    stopover:true
+  })
 
+  var roganFinish = {
+    lat: parseFloat(closestArt.Lat),
+    lng: parseFloat(closestArt.Long)
+  }
 
- var start = {
-        lat: -27.4706,
-        lng: 153.0170
-    };
+  var roganStart = {
+    lat: start.latitude,
+    lng: start.longitude
+  }
 
-    console.log(start);
+  console.log(roganStart);
   console.log(roganStops);
   console.log(roganFinish);
 
-
-  getDirections(start, roganFinish, roganStops)
+  getDirections(roganStart, roganFinish, roganStops);
 
 }
 

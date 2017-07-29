@@ -126,8 +126,10 @@ p {
 /***** MAP *****/
 .mapContents{
 	position: absolute;
-	z-index: 2;
-	width: 100%;
+	z-index: 1;
+	width: 100vw;
+	height: auto;
+
 }
 
 #banner{
