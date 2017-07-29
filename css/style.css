@@ -29,11 +29,13 @@
 	position: fixed;
 	left:0;
 	top:0;
+	background-image: url("../img/brisbane.jpg");
+	background-size: auto 100%;
 }
 
 h1{
 	font-family: 'Quantico', sans-serif;
-	letter-spacing: 5px;
+	letter-spacing: 10px;
 	text-transform: uppercase;
 	text-align: center;
 	color: cyan;
@@ -51,17 +53,12 @@ p {
 	text-shadow: 0px 0px 20px #FFFFFF;
 }
 
-body{
-	background-image: url("img/brisbane.jpg");
-}
-
 /***** INDEX *****/
 
 #indexHeader {
-	/*background-color: #000000;*/
-
-	/*width: 100%;
-	overflow: hidden;*/
+	background-color: rgba(0,0,0,0.8);
+	overflow: hidden;
+	height: 100%;
 }
 
 .indexButton{
