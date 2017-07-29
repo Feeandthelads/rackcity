@@ -1,5 +1,6 @@
 console.log('loaded scripts.js');
 
+var haversine = require('haversine.js');
 
 $.getJSON("js/bris.json", function(data) {
 	console.log(data);
