@@ -51,6 +51,8 @@ p {
 	font-size: 1em;
 	color: #FFFFFF;
 	text-shadow: 0px 0px 20px #FFFFFF;
+	margin-top: 40%;
+	margin-bottom: 10%;
 }
 
 /***** INDEX *****/
@@ -62,17 +64,17 @@ p {
 }
 
 .indexButton{
-	background-color: magenta;
-	padding: 20px;
+	background-color: rgba(255,0,255,0.8);
+	box-shadow: 0px 0px 20px #FF00FF;
+	padding: 10px;
 	width: 100%;
 	margin-bottom: 20px;
 	font-family: 'Quantico', sans-serif;
+	font-size: 1em;
+	color: #000000;
 }
 
-.indexButton2{
-	background-color: magenta;
-	padding: 20px;
-	width: 100%;
-	margin-bottom: 20px;
-	font-family: 'Quantico', sans-serif;
+.indexButton:hover{
+	color: #000000;
+	text-decoration: none;
 }
