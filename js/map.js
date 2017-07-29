@@ -11,11 +11,13 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: -34.397, lng: 150.644},
-      zoom: 12,
       gestureHandling: 'cooperative',
-      scrollwheel: false
+      scrollwheel: false,
+      styles: [
+          ]
     });
-
+    var bikeLayer = new google.maps.BicyclingLayer({});
+        bikeLayer.setMap(map);
     directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
     directionsDisplay.setMap(map);
 
@@ -53,8 +55,6 @@ function updateLocation(dest, way) {
           lng: position.coords.longitude
         };
 
-        console.log(pos);
-
         if(marker == null) {
           map.setCenter(pos);
           marker = new google.maps.Marker({
@@ -63,8 +63,7 @@ function updateLocation(dest, way) {
           });
         } else {
           marker.setPosition(pos);
-          map.setCenter(pos);
-          if (dest != null) {
+          if (dest != null && directionsService == null) {
             getDirections(pos, dest, way)
           }
         }
@@ -78,7 +77,6 @@ function updateLocation(dest, way) {
 }
 
 function getDirections(current, final, stops) {
-  if (directionsService == null) {
     directionsService = new google.maps.DirectionsService();
     directionsService.route(
       {
@@ -95,8 +93,5 @@ function getDirections(current, final, stops) {
         } else {
           window.alert('Directions request failed due to ' + status);
         }
-      });
-  } else {
-
-  }
+    });
 }
