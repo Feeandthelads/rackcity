@@ -1,7 +1,16 @@
 console.log('loaded scripts.js');
 
+$.get("js/publicart.csv", function(text){
+     var data = Papa.parse(text, {header: true});
+     console.log();
+});
+
+
+
+
 
 var closestCycle;
+var closestArtLocation;
 
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
@@ -45,11 +54,49 @@ function doSomething(latitude, longitude){
 			}
 
 	};
-	console.log(closestCycle);
+	//console.log(closestCycle);
+
+	$.get("js/publicart.csv", function(text){
+	     var data = Papa.parse(text, {header: true});
+	    	checkLocationofArt(data, closestCycle)
 });
+
+
+		
+	});
+	
+
+}
+
+function checkLocationofArt(data, closestCycle){
+		for (var i =0; i < data.data.length; i++) {
+	    		
+	    		stop = {
+	    			latitude: data.data[i].Lat,
+	    			longitude: data.data[i].Long
+	    			}
+	 			
+	    		var newArtNumber = haversine(start,stop);
+
+	    		if (typeof closestArt == 'undefined'){
+					var closestArt = newArtNumber;
+				} else{
+					if(newArtNumber < closestArt){
+						closestArt = newArtNumber;
+						newArt = data.data[i];
+						loadedArt(data.data[i]);
+					}
+	    		};
+			}
+			
+				curryPot(closestCycle, newArt);
 
 }
 
 function loadedCycle(cycleArray){	
 	closestCycle = cycleArray;
+}
+
+function loadedArt(data){
+	closestArtLocation = data;
 }
