@@ -160,22 +160,28 @@ function checkIfAtArt(startLocation, artLocation){
 
 function endJourney(){
   //show the model and change html to make it appropriate to go to a bike rack, or restart the process of finding art.
-
+  $.get("../php/incart.php");
 }
 
 function startProcessAgain(){
+  //streak +1
+  $.get("../php/incstreak.php");
+
   beginSequence();
 }
 
 function goToCycleStation(){
 
 //    doSomething(pos.lat, pos.lng);
-    // getDirections(pos, goal, null); 
+    // getDirections(pos, goal, null);
   getDirectionsToCycle(pos, closestCycle);
 }
 
 
 function getDirectionsToCycle(current, final) {
+    //Increment bike by 1
+    $.get("../php/incbike.php");
+
     var newFinal = {
       lat:final.latitude,
       lng:final.longitude

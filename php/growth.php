@@ -44,6 +44,4 @@ $stmtGrow->execute();
 
 $stmtGrow->close();
 $conn->close();
-
-require_once ("getplayer.php");
  ?>

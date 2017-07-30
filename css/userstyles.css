@@ -6,10 +6,18 @@
 .body-define{
     overflow-y:scroll !important;
     position:relative !important;
-    height:100% !important;
     width:100vw !important;
 }
 
 p{
     margin:10px;
+}
+
+.progress{
+    width:50vw;
+    margin:auto;
+}
+
+h1{
+    margin-top:5px;
 }

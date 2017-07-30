@@ -24,7 +24,7 @@
                         <p>
                             <?php echo "Name: ".$_SESSION['name']."<br />";?></p>
                         <p>
-                            <?php echo "Class".$_SESSION['cls']."<br />";?></p>  
+                            <?php echo "Class: ".$_SESSION['cls']."<br />";?></p>  
                             
                         <p>
                             <?php echo "Stamina: ".$_SESSION['stm']."<br />";?></p>
