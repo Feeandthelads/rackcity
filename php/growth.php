@@ -21,7 +21,7 @@ if ($nstm + $nwis > 30) {
 } else if ($nstm + $nwis > 120) {
   $nclass = 'Master ';
 } else if ($nstm + $nwis > 200) {
-  $nclass = ' Grandmaster ';
+  $nclass = 'Grandmaster ';
 }
 
 if($nstm > 10 && $nstm > $nwis) {
@@ -34,16 +34,16 @@ if($nstm > 10 && $nstm > $nwis) {
   $nclass .= 'Novice';
 }
 
-$stmtGrow = $conn->prepare("UPDATE user SET Stamina=?, Wisdom=?, Class=? WHERE UID=1");
-$stmtGrow->bind_param("iis", $stam , $wisd, $clss);
+$stmtGrow = $conn->prepare("UPDATE users SET Stamina = ?, Wisdom = ?, Class = ? WHERE UID=1;");
+$stmtGrow->bind_param("dds", $stam, $wisd, $clss);
 
 $stam = $nstm;
 $wisd = $nwis;
 $clss = $nclass;
-
 $stmtGrow->execute();
 
 $stmtGrow->close();
 $conn->close();
 
+require_once ("getplayer.php");
  ?>
