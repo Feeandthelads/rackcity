@@ -34,20 +34,16 @@ if($nstm > 10 && $nstm > $nwis) {
   $nclass .= 'Novice';
 }
 
-$stmtGrow = $conn->prepare("UPDATE user SET Stamina=?, Wisdom=?, Class=? WHERE UID=1");
-$stmtGrow->bind_param("iis", $stam , $wisd, $clss);
+$stmtGrow = $conn->prepare("UPDATE users SET Stamina = ?, Wisdom = ?, Class = ? WHERE UID=1;");
+$stmtGrow->bind_param("dds", $stam, $wisd, $clss);
 
 $stam = $nstm;
 $wisd = $nwis;
 $clss = $nclass;
-
 $stmtGrow->execute();
 
 $stmtGrow->close();
 $conn->close();
 
-
-session_destroy();
-require_once('getplayer.php');
-
+require_once ("getplayer.php");
  ?>
