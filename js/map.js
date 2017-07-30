@@ -145,25 +145,63 @@ function checkIfAtArt(startLocation, artLocation){
     longitude:artLocation.lng
   }
 
-
-    // var start = {
-    //     latitude: -27.4706,
-    //     longitude: 153.0170
-    // };
-
-
-    // var end = {
-    //     latitude: -27.4706,
-    //     longitude: 153.0170
-    // };
-
     var checkIfClose = haversine(start, end)
-    console.log(checkIfClose);
-    if(checkIfClose < 0){
-      console.log('you are within range');
+    //console.log(checkIfClose);
+    if(checkIfClose < 0.005){
+      //console.log('you are within range');
+      endJourney();
+
     } else{
-      console.log('too far away');
+      //console.log('too far away');
     }
+
+
+}
+
+function endJourney(){
+  //show the model and change html to make it appropriate to go to a bike rack, or restart the process of finding art.
+
+}
+
+function startProcessAgain(){
+  beginSequence();
+}
+
+function goToCycleStation(){
+
+  var pos = {
+    
+  }
+//    doSomething(pos.lat, pos.lng);
+    // getDirections(pos, goal, null); 
+  getDirectionsToCycle(pos, closestCycle);
+}
+
+
+function getDirectionsToCycle(current, final) {
+    var newFinal = {
+      lat:final.latitude,
+      lng:final.longitude
+    }
+
+    directionsService = new google.maps.DirectionsService();
+    stops = [];
+    directionsService.route(
+      {
+      origin: current,
+      destination: newFinal,
+      travelMode: 'BICYCLING',
+      unitSystem:  google.maps.UnitSystem.METRIC,
+      waypoints: stops,
+      optimizeWaypoints: true,
+      provideRouteAlternatives: false,
+      }, function(response, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(response);
+        } else {
+          window.alert('Directions request failed due to ' + status);
+        }
+    });
 
 
 }
