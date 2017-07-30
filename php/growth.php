@@ -21,7 +21,7 @@ if ($nstm + $nwis > 30) {
 } else if ($nstm + $nwis > 120) {
   $nclass = 'Master ';
 } else if ($nstm + $nwis > 200) {
-  $nclass = ' Grandmaster ';
+  $nclass = 'Grandmaster ';
 }
 
 if($nstm > 10 && $nstm > $nwis) {
@@ -45,5 +45,9 @@ $stmtGrow->execute();
 
 $stmtGrow->close();
 $conn->close();
+
+
+session_destroy();
+require_once('getplayer.php');
 
  ?>

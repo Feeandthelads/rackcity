@@ -25,7 +25,4 @@ $_SESSION['trips'] = array();
 
 $stmt->close();
 $conn->close();
-
-session_destroy();
-require_once('getplayer.php');
 ?>
