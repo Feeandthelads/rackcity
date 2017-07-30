@@ -146,7 +146,7 @@ p {
 /***** MAP *****/
 
 #banner{
-	
+
 	overflow: hidden;
 	width: 100%;
 }
@@ -167,6 +167,18 @@ p {
 	position: absolute;
 }
 
+.menuIcon {
+	width: 30px;
+	float: right;
+}
+
+.bars{
+	height: 5px;
+	border-radius: 2px;
+	width: 100%;
+	margin: 1px;
+	background-color: magenta;
+}
 
 
 /*TEST CSS*/
