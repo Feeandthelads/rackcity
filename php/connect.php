@@ -1,5 +1,5 @@
 <?php
-$servername = "danielafraser.com";
+$servername = "localhost";
 $username = "tyga";
 $password = "rackcity";
 $dbname = "racks";
