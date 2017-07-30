@@ -1,6 +1,7 @@
 var map;
 var marker;
 var pos;
+var goal;
 var waypts;
 var directionsDisplay;
 var directionsService;
@@ -23,7 +24,7 @@ function initMap() {
 
     updateLocation(goal,waypts);
 
-    var goal = {
+    goal = {
         lat: -27.4706,
         lng: 153.0170
     };
@@ -32,6 +33,7 @@ function initMap() {
 
     setInterval(function() {
         updateLocation(goal,waypts);
+        checkIfAtArt(pos, goal);
     }, 1500);
 
   }
@@ -46,7 +48,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function updateLocation(dest, way) {
   infoWindow = new google.maps.InfoWindow;
-
   // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -54,6 +55,8 @@ function updateLocation(dest, way) {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         };
+
+      //  console.log(pos)
 
         if(marker == null) {
           map.setCenter(pos);
@@ -130,3 +133,37 @@ function getDirections(current, final, stops) {
 
 }
 
+
+
+function checkIfAtArt(startLocation, artLocation){
+  var start = {
+    latitude:startLocation.lat,
+    longitude:startLocation.lng
+  }
+  var end = {
+    latitude:artLocation.lat,
+    longitude:artLocation.lng
+  }
+
+
+    // var start = {
+    //     latitude: -27.4706,
+    //     longitude: 153.0170
+    // };
+
+
+    // var end = {
+    //     latitude: -27.4706,
+    //     longitude: 153.0170
+    // };
+
+    var checkIfClose = haversine(start, end)
+    console.log(checkIfClose);
+    if(checkIfClose < 0){
+      console.log('you are within range');
+    } else{
+      console.log('too far away');
+    }
+
+
+}

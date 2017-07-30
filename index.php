@@ -17,7 +17,9 @@
 
 </head>
 <body>
-
+<?php
+require_once ("php/getplayer.php");
+?>
 <div class="body-define indexContents">
 	<div id="indexHeader">
 		<div class="container">
@@ -31,7 +33,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="map.html"><button class="indexButton">Find Art</button></a>
+					<a href="map.php"><button class="indexButton">Find Art</button></a>
 				</div>
 				<div class="col-xs-6">
 					<button class="indexButton">Find Food</button>
@@ -42,6 +44,5 @@
 </div>
 
 </body>
-
 
 </html>
