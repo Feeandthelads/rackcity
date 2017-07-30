@@ -32,12 +32,12 @@ require_once ("php/getplayer.php");
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-xs-6 col-xs-offset-3">
 					<a href="map.php"><button class="indexButton">Find Art</button></a>
 				</div>
-				<div class="col-xs-6">
+				<!-- <div class="col-xs-6">
 					<button class="indexButton">Find Food</button>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
