@@ -52,9 +52,9 @@ function doSomething(latitude, longitude){
 			}
 				
 			}
-
+			//console.log(lowestNumber);
 	};
-	//console.log(closestCycle);
+	
 
 	$.get("js/publicart.csv", function(text){
 	     var data = Papa.parse(text, {header: true});
