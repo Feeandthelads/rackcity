@@ -11,20 +11,23 @@
 	  <script type="text/javascript" src="js/map.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat:400,700|Plaster|Quantico" rel="stylesheet">
 </head>
 <body>
 
-<div class="body-define mapContents">
-	<a href="index.php">
+<div class="body-define-menu">
+	
 		<div id="banner">
-			<h2>Rack City</h2>
+			<h2 onclick="animateMenu()">Rack City <i class="fa fa-bars" aria-hidden="true"></i></h2>
+
 		</div>
-	</a>
+	
 	<a href="#">
-		<button class="mapButton testbutt" onclick="goToCycleStation()" ></button>
+		
 	</a>
 	<a href="#">
 		<button class="mapButton" onclick="startProcessAgain()"></button>
@@ -33,13 +36,11 @@
 
 
 
+
+
 </div>
 
-
-
-
-<div class="body-define" id="map"></div>
-
+<div class="body-define-map" id="map"></div>
 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMnxeLV4_nOQ45YrwO3VGchHnPbjpV0jw&callback=initMap" type="text/javascript"></script>

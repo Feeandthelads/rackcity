@@ -103,3 +103,17 @@ function loadedCycle(cycleArray){
 function loadedArt(data){
 	closestArtLocation = data;
 }
+
+var hid = true;
+function animateMenu(){
+	if(hid){
+		hid = false;
+		$('.body-define-map').stop().animate({'height':'90vh'}, 500);
+		$('.body-define-menu').stop().animate({'bottom':'-20vh'},500);
+	}else{
+		$('.body-define-map').stop().animate({'height':'70vh'}, 500);
+		$('.body-define-menu').stop().animate({'bottom':'0vh'},500);
+		hid = true;
+	}
+	
+}

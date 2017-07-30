@@ -30,6 +30,26 @@
 	position: fixed;
 	left:0;
 	top:0;
+}
+
+
+.body-define-map{
+	height: 70vh;
+	width: 100vw;
+	overflow-y: scroll;
+	position: fixed;
+	left:0;
+	top:0;
+}
+
+.body-define-menu{
+	height: 30vh;
+	width: 100vw;
+	overflow-y: none;
+	position: fixed;
+	left:0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.9);
 
 }
 
@@ -124,16 +144,9 @@ p {
 }
 
 /***** MAP *****/
-.mapContents{
-	position: absolute;
-	z-index: 1;
-	width: 100vw;
-	height: auto;
-
-}
 
 #banner{
-	background-color: rgba(0,0,0,0.9);
+	
 	overflow: hidden;
 	width: 100%;
 }
