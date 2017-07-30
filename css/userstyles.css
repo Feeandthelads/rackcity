@@ -1,0 +1,15 @@
+.userImg{
+    display:block;
+    margin:auto;
+}
+
+.body-define{
+    overflow-y:scroll !important;
+    position:relative !important;
+    height:100% !important;
+    width:100vw !important;
+}
+
+p{
+    margin:10px;
+}
