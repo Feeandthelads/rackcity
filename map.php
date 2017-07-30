@@ -22,12 +22,14 @@
 <div class="body-define-menu">
 
 	<div id="banner">
-		<h2 onclick="animateMenu()">Rack City <i class="fa fa-bars" aria-hidden="true"></i></h2>
-		<div class="menuIcon">
-			<div class="bars"></div>
-			<div class="bars"></div>
-			<div class="bars"></div>
-		</div>
+		
+			<h2>Rack City</h2>
+			<div class="menuIcon" onclick="animateMenu()">
+				<div class="bars"></div>
+				<div class="bars"></div>
+				<div class="bars"></div>
+			</div>
+		
 
 	</div>
 
