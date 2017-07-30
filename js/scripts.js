@@ -1,9 +1,9 @@
 console.log('loaded scripts.js');
 
-$.get("js/publicart.csv", function(text){
-     var data = Papa.parse(text, {header: true});
-     console.log();
-});
+// $.get("js/publicart.csv", function(text){
+//      var data = Papa.parse(text, {header: true});
+//      console.log();
+// });
 
 
 
@@ -12,14 +12,17 @@ $.get("js/publicart.csv", function(text){
 var closestCycle;
 var closestArtLocation;
 
-if ("geolocation" in navigator) {
+function beginSequence(){
+ if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position){
 		   doSomething(position.coords.latitude,position.coords.longitude)
         });  
 } else {
   console.log('no location data enabled');
 }
+}
 
+beginSequence();
 
 function doSomething(latitude, longitude){
 	var newLat = latitude;

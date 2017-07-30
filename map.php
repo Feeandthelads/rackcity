@@ -24,12 +24,19 @@
 		</div>
 	</a>
 	<a href="#">
-		<button class="mapButton"></button>
+		<button class="mapButton testbutt" onclick="goToCycleStation()" ></button>
 	</a>
 	<a href="#">
-		<button class="mapButton"></button>
+		<button class="mapButton" onclick="startProcessAgain()"></button>
 	</a>
+
+
+
+
 </div>
+
+
+
 
 <div class="body-define" id="map"></div>
 
