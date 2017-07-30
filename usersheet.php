@@ -18,7 +18,9 @@
                         <h1>User Stats</h1>
                         <p></p>
                         <p></p>
-                        <?php session_start();?>
+                        <?php 
+                            include ('php/calculatepercentage.php');
+                        ?>
 
                         <img class="userImg" src="<?php echo htmlspecialchars($_SESSION["img"]); ?>" alt="userSprite" />
                         <p>
@@ -33,10 +35,14 @@
                             <?php echo "Wisdom ".$_SESSION['wis']."<br />";?></p>
 
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
-                                0%
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: <?php echo $_SESSION['perc']."%" ?>">
+                                <?php echo $_SESSION["perc"] ?>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="map.php"><button class="indexButton">Back</button></a>
 
                     </div>
                 </div>
