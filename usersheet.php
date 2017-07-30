@@ -24,8 +24,6 @@
                         <p>
                             <?php echo "Name: ".$_SESSION['name']."<br />";?></p>
                         <p>
-                            <?php echo "Lvl ".$_SESSION['lvl']."<br />";?></p>
-                        <p>
                             <?php echo "Class".$_SESSION['cls']."<br />";?></p>  
                             
                         <p>
