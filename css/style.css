@@ -159,11 +159,9 @@ p {
 .mapButton{
 	background-color: rgba(255,0,255,0.8);
 	box-shadow: 0px 0px 10px #FF00FF;
-	padding-bottom=: 40px;
 	width: 100%;
-	font-family: 'Quantico', sans-serif;
-	font-size: 1em;
-	color: #000000;
+	margin-top: 10px;
+	margin-bottom: -20px;
 }
 
 .menuIcon {

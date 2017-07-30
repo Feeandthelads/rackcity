@@ -169,9 +169,6 @@ function startProcessAgain(){
 
 function goToCycleStation(){
 
-  var pos = {
-    
-  }
 //    doSomething(pos.lat, pos.lng);
     // getDirections(pos, goal, null); 
   getDirectionsToCycle(pos, closestCycle);
