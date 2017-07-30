@@ -21,22 +21,35 @@
 
 <div class="body-define-menu">
 
-		<div id="banner">
-			<h2 onclick="animateMenu()">Rack City <i class="fa fa-bars" aria-hidden="true"></i></h2>
-			<div class="menuIcon">
-				<div class="bars"></div>
-				<div class="bars"></div>
-				<div class="bars"></div>
-			</div>
-
+	<div id="banner">
+		<h2 onclick="animateMenu()">Rack City <i class="fa fa-bars" aria-hidden="true"></i></h2>
+		<div class="menuIcon">
+			<div class="bars"></div>
+			<div class="bars"></div>
+			<div class="bars"></div>
 		</div>
 
-	<a href="#">
+	</div>
 
-	</a>
-	<a href="#">
-		<button class="mapButton" onclick="startProcessAgain()"></button>
-	</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<a href="#">
+					<button class="mapButton" id="mapButton1" onclick="startProcessAgain()"></button>
+				</a>
+			</div>
+			<div class="col-xs-4">
+				<a href="#">
+					<button class="mapButton" id="mapButton2" onclick="goToCycleStation()"></button>
+				</a>
+			</div>
+			<div class="col-xs-4">
+				<a href="usersheet.php">
+					<button class="mapButton" id="mapButton3"></button>
+				</a>
+			</div>
+		</div>
+	</div>
 
 
 
