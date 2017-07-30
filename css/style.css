@@ -158,26 +158,28 @@ p {
 .mapButton{
 	background-color: rgba(255,0,255,0.8);
 	box-shadow: 0px 0px 10px #FF00FF;
-	padding: 20px;
+	padding-bottom=: 40px;
+	width: 100%;
 	font-family: 'Quantico', sans-serif;
 	font-size: 1em;
 	color: #000000;
-	right: 20px;
-	bottom: 20px;
-	position: absolute;
 }
 
 .menuIcon {
 	width: 30px;
 	float: right;
+	position: absolute;
+	right: 10px;
+	margin-top: -40px;
 }
 
 .bars{
-	height: 5px;
+	height: 4px;
 	border-radius: 2px;
 	width: 100%;
-	margin: 1px;
+	margin: 4px;
 	background-color: magenta;
+	box-shadow: 0 0 5px magenta;
 }
 
 
