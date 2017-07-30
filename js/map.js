@@ -161,6 +161,8 @@ function checkIfAtArt(startLocation, artLocation){
 function endJourney(){
   //show the model and change html to make it appropriate to go to a bike rack, or restart the process of finding art.
   $.get("../rackcity/php/incart.php");
+  $.get("../rackcity/php/growth.php");
+  
 }
 
 function startProcessAgain(){
