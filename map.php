@@ -22,12 +22,14 @@
 <div class="body-define-menu">
 
 	<div id="banner">
-		<h2 onclick="animateMenu()">Rack City <i class="fa fa-bars" aria-hidden="true"></i></h2>
-		<div class="menuIcon">
-			<div class="bars"></div>
-			<div class="bars"></div>
-			<div class="bars"></div>
-		</div>
+		
+			<h2>Rack City</h2>
+			<div class="menuIcon" onclick="animateMenu()">
+				<div class="bars"></div>
+				<div class="bars"></div>
+				<div class="bars"></div>
+			</div>
+		
 
 	</div>
 
@@ -35,17 +37,32 @@
 		<div class="row">
 			<div class="col-xs-4">
 				<a href="#">
-					<button class="mapButton" id="mapButton1" onclick="startProcessAgain()"></button>
+					<button class="mapButton" id="mapButton1" onclick="goToCycleStation()">
+						<img src="img/backburger.png" />
+					</button>
 				</a>
+				<p>
+					RETURN BICYCLE
+				</p>
 			</div>
 			<div class="col-xs-4">
 				<a href="#">
-					<button class="mapButton" id="mapButton2" onclick="goToCycleStation()"></button>
+					<button class="mapButton" id="mapButton2" onclick="startProcessAgain()">
+						<img src="img/brush.png" />
+					</button>
+					<p>
+						FIND MORE ART
+					</p>
 				</a>
 			</div>
 			<div class="col-xs-4">
 				<a href="usersheet.php">
-					<button class="mapButton" id="mapButton3"></button>
+					<button class="mapButton" id="mapButton3">
+						<img src="img/account.png" />
+					</button>
+					<p>
+						MY PROFILE
+					</p>
 				</a>
 			</div>
 		</div>

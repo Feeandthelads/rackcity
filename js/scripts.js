@@ -104,7 +104,7 @@ function loadedArt(data){
 	closestArtLocation = data;
 }
 
-var hid = true;
+var hid = false;
 function animateMenu(){
 	if(hid){
 		hid = false;
