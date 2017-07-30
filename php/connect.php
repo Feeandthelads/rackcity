@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "danielafraser.com";
+$username = "tyga";
+$password = "rackcity";
 $dbname = "racks";
 
 // Create connection
