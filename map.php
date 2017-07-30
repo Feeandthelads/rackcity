@@ -17,18 +17,21 @@
 </head>
 <body>
 
-<div class="body-define">
-	<div class="mapContents">
+<div class="body-define mapContents">
+	<a href="index.php">
 		<div id="banner">
-			<a href="index.html"><h2>Rack City</h2></a>
+			<h2>Rack City</h2>
 		</div>
-	</div>
-	
-	<div class="body-define" id="map"></div>
-	
+	</a>
+	<a href="#">
+		<button class="mapButton"></button>
+	</a>
+	<a href="#">
+		<button class="mapButton"></button>
+	</a>
 </div>
 
-
+<div class="body-define" id="map"></div>
 
 
 
