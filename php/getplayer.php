@@ -1,5 +1,6 @@
-<?php>
+<?php
 require_once ("connect.php");
+session_start();
 
 // prepare and bind
 $stmt = $conn->prepare("SELECT * FROM users WHERE UID = ?");
@@ -8,24 +9,16 @@ $stmt->bind_param("i", $id);
 $id = 1;
 $stmt -> execute();
 
-$result = $stmt -> get_result();
+$answer= $stmt -> get_result();
 
-echo ("<div id = 'name' data-id = ".result["Name"]."style ='hidden:true'>
-</div>");
+$result = $answer -> fetch_assoc();
 
-echo ("<div id = 'stamina' data-id = ".result["Stamina"]."style ='hidden:true'>
-
-</div>");
-
-echo ("<div id = 'charisma' data-id = ".result["Charisma"]."style ='hidden:true'>
-
-</div>");
-
-echo ("<div id = 'wisdom' data-id = ".result["Wisdom"]."style ='hidden:true'>
-
-</div>");
+$_SESSION["name"] = $result['Name'];
+$_SESSION["img"] = $result['Image'];
+$_SESSION["stm"] = $result['Stamina'];
+$_SESSION["cha"] = $result['Charisma'];
+$_SESSION["wis"] = $result['Wisdom'];
 
 $stmt->close();
 $conn->close();
-
 ?>
