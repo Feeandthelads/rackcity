@@ -39,6 +39,10 @@
                                 <?php echo $_SESSION["perc"] ?>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="map.php"><button class="indexButton">Back</button></a>
 
                     </div>
                 </div>
