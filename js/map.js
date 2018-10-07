@@ -79,7 +79,7 @@ function updateLocation(dest, way) {
     }
 }
 
-function curryPot(closestCycle, closestArt, start){
+var curryPot = function(closestCycle, closestArt, start){
   var roganStops = [];
 
   var roganStopsbeforethechange = {
@@ -160,14 +160,14 @@ function checkIfAtArt(startLocation, artLocation){
 
 function endJourney(){
   //show the model and change html to make it appropriate to go to a bike rack, or restart the process of finding art.
-  $.get("../rackcity/php/incart.php");
-  $.get("../rackcity/php/growth.php");
+  // $.get("../rackcity/php/incart.php");
+  // $.get("../rackcity/php/growth.php");
   
 }
 
 function startProcessAgain(){
   //streak +1
-  $.get("../rackcity/php/incstreak.php");
+  // $.get("../rackcity/php/incstreak.php");
 
   beginSequence();
 }
@@ -182,7 +182,7 @@ function goToCycleStation(){
 
 function getDirectionsToCycle(current, final) {
     //Increment bike by 1
-    $.get("../rackcity/php/incbike.php");
+    // $.get("../rackcity/php/incbike.php");
 
     var newFinal = {
       lat:final.latitude,

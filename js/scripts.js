@@ -23,7 +23,6 @@ function beginSequence(){
 }
 
 beginSequence();
-
 function doSomething(latitude, longitude){
 	var newLat = latitude;
 	var newLong = longitude;
